@@ -1,0 +1,310 @@
+/* ===== CHARTS STYLES ===== */
+
+.chart-container {
+    position: relative;
+    height: 350px;
+    margin-bottom: 20px;
+}
+
+.chart-wrapper {
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.chart-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.chart-header .chart-options {
+    display: flex;
+    gap: 8px;
+}
+
+.chart-option-btn {
+    padding: 6px 12px;
+    border: 1px solid var(--border-color);
+    background: white;
+    color: var(--text-dark);
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.chart-option-btn:hover,
+.chart-option-btn.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+}
+
+/* ===== REPORT SUMMARY CARDS ===== */
+.report-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.summary-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    border-top: 3px solid;
+}
+
+.summary-card.revenue {
+    border-top-color: var(--success-color);
+}
+
+.summary-card.cost {
+    border-top-color: var(--danger-color);
+}
+
+.summary-card.profit {
+    border-top-color: var(--primary-color);
+}
+
+.summary-card-label {
+    font-size: 12px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.summary-card-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.summary-card-meta {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+.summary-card-trend {
+    font-size: 11px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-color);
+}
+
+.summary-card-trend.positive {
+    color: var(--success-color);
+}
+
+.summary-card-trend.negative {
+    color: var(--danger-color);
+}
+
+/* ===== FILTER SECTION ===== */
+.report-filter {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.filter-content {
+    display: flex;
+    gap: 15px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-group label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.filter-group input,
+.filter-group select {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* ===== TABLE ENHANCED ===== */
+.report-table {
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.report-table-header {
+    padding: 20px 25px;
+    border-bottom: 2px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.report-table-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.report-table-wrapper {
+    overflow-x: auto;
+}
+
+.report-table .table {
+    margin: 0;
+}
+
+.report-table .table th {
+    background: var(--light-bg);
+    padding: 15px 25px;
+    font-weight: 600;
+    color: var(--text-dark);
+    border-bottom: 2px solid var(--border-color);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.report-table .table td {
+    padding: 15px 25px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.report-table .table tbody tr:hover {
+    background: var(--light-bg);
+}
+
+.report-table .table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ===== METRIC HIGHLIGHT ===== */
+.metric-highlight {
+    display: inline-block;
+    padding: 4px 8px;
+    background: rgba(102, 126, 234, 0.1);
+    color: var(--primary-color);
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.metric-highlight.positive {
+    background: rgba(72, 187, 120, 0.1);
+    color: var(--success-color);
+}
+
+.metric-highlight.negative {
+    background: rgba(245, 101, 101, 0.1);
+    color: var(--danger-color);
+}
+
+/* ===== COMPARISON CHART ===== */
+.comparison-bars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.comparison-bar-item {
+    text-align: center;
+}
+
+.comparison-bar {
+    height: 200px;
+    background: var(--light-bg);
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.comparison-bar-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.comparison-bar-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.comparison-bar-value {
+    font-size: 12px;
+    color: var(--text-light);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .filter-content {
+        flex-direction: column;
+    }
+
+    .filter-group {
+        width: 100%;
+    }
+
+    .filter-group input,
+    .filter-group select {
+        width: 100%;
+    }
+
+    .report-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-container {
+        height: 250px;
+    }
+
+    .report-table-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .report-table-header h3 {
+        margin-bottom: 15px;
+    }
+}
